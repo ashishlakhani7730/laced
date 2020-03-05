@@ -1,0 +1,237 @@
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendors/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/vendors/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+<script>
+$(function() {
+    "use strict";
+    var mapData = {
+            "US": 298,
+            "SA": 200,
+            "AU": 760,
+            "IN": 2000000,
+            "GB": 120,
+        };
+    
+    if( $('#world_map_marker_1').length > 0 ){
+        $('#world_map_marker_1').vectorMap(
+        {
+            map: 'world_mill_en',
+            backgroundColor: 'transparent',
+            borderColor: '#fff',
+            borderOpacity: 0.25,
+            borderWidth: 0,
+            color: '#e6e6e6',
+            regionStyle : {
+                initial : {
+                  fill : 'rgba(86,111,201,.4)'
+                }
+              },
+
+            markerStyle: {
+              initial: {
+                            r: 10,
+                            'fill': '#fff',
+                            'fill-opacity':1,
+                            'stroke': '#000',
+                            'stroke-width' : 1,
+                            'stroke-opacity': 0.4
+                        },
+                },
+           <?php
+                $query = $this->db->query("SELECT User_Name,User_Latitude,User_Longitude FROM auction_user");
+
+                $lat_long = $query->result();
+           ?>
+            markers : [
+            <?php foreach($lat_long as $keys => $l_l) { ?>
+              {
+                <?php if($l_l->User_Latitude != '' && $l_l->User_Longitude != '' && $l_l->User_Latitude != 'NULL' && $l_l->User_Longitude != 'NULL') { ?>
+                latLng : [<?php echo $l_l->User_Latitude ?>, <?php echo $l_l->User_Longitude ?>],
+                name : '<?php echo $l_l->User_Name; ?>'
+                <?php } ?>
+              },
+            <?php } ?>
+              ],
+
+            series: {
+                regions: [{
+                    values: {
+                        "US": '#469408',
+                        "SA": '#e69a2a',
+                        "AU": '#177ec1',
+                        "IN": '#dc4666',
+                        "GB": '#ea6c41',
+                    },
+                    attribute: 'fill'
+                }]
+            },
+            hoverOpacity: null,
+            normalizeFunction: 'linear',
+            zoomOnScroll: false,
+            scaleColors: ['#000000', '#000000'],
+            selectedColor: '#000000',
+            selectedRegions: [],
+            enableZoom: false,
+            hoverColor: '#fff',
+        });
+    }
+
+    if( $('#india').length > 0 ){
+    $('#india').vectorMap({
+            map : 'in_mill',
+            backgroundColor : 'transparent',
+            regionStyle : {
+                initial : {
+                    fill : 'rgba(86,111,201,.4)'
+                }
+            }
+        });
+    }   
+
+    if( $('#usa').length > 0 ){
+        $('#usa').vectorMap({
+            map : 'us_aea_en',
+            backgroundColor : 'transparent',
+            regionStyle : {
+                initial : {
+                    fill : 'rgba(86,111,201,.4)'
+                }
+            }
+        });
+    }        
+           
+    if( $('#australia').length > 0 ){        
+        $('#australia').vectorMap({
+            map : 'au_mill',
+            backgroundColor : 'transparent',
+            regionStyle : {
+                initial : {
+                    fill : 'rgba(86,111,201,.4)'
+                }
+            }
+        });
+    }   
+     
+    if( $('#uk').length > 0 ){ 
+        $('#uk').vectorMap({
+            map : 'uk_mill_en',
+            backgroundColor : 'transparent',
+            regionStyle : {
+                initial : {
+                    fill : 'rgba(86,111,201,.4)'
+                }
+            }
+        });
+    }   
+});
+</script>
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/dist/js/dataTables-data.js"></script>
+
+<!-- modal -->
+<script src="<?php echo base_url(); ?>assets/dist/js/modal-data.js"></script>
+
+<!-- wysuhtml5 Plugin JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/wysihtml5x/dist/wysihtml5x.min.js"></script>
+		
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.js"></script>
+		
+<!-- Bootstrap Wysuhtml5 Init JavaScript -->
+<script src="<?php echo base_url(); ?>assets/dist/js/bootstrap-wysuhtml5-data.js"></script>
+		
+<!-- Slimscroll JavaScript -->
+<script src="<?php echo base_url(); ?>assets/dist/js/jquery.slimscroll.js"></script>
+
+<!-- simpleWeather JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/moment/min/moment.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/dist/js/simpleweather-data.js"></script>
+
+<!-- Progressbar Animation JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+
+<!-- Fancy Dropdown JS -->
+<script src="<?php echo base_url(); ?>assets/dist/js/dropdown-bootstrap-extended.js"></script>
+
+<!-- Sparkline JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+
+<!-- Owl JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+<!-- ChartJS JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/chart.js/Chart.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/raphael/raphael.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/morris.js/morris.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+<!-- Switchery JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/switchery/dist/switchery.min.js"></script>
+
+<!-- Init JavaScript -->
+<script src="<?php echo base_url(); ?>assets/dist/js/init.js"></script>
+<script src="<?php echo base_url(); ?>assets/dist/js/dashboard-data.js"></script>
+<!-- Bootstrap Datetimepicker JavaScript -->
+<script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- Data table JavaScript -->
+<script src="<?php echo base_url(); ?>assets/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+
+<script>
+
+
+$("#notify").click(function(){
+    $.ajax({
+                url: '<?php echo site_url('user/notification') ?> ',
+                type: 'post',
+                dataType: 'json',
+                success: function(json) {
+                    if(json.code == 1)
+                    {
+                         $(".top-nav-icon-badge").text('0');
+                    }
+                    else
+                    {
+                        console.log('somthing went to wrong');
+                    }
+                }
+            });
+});
+
+    $(function () {
+        window.setTimeout(function ()
+        {
+            $(".alert").fadeTo(500, 0).slideUp(500, function ()
+            {
+                $(this).remove();
+            });
+        }, 2000);
+
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function()
+    {
+       $("#datable_1").DataTable(); 
+    });
+</script>
+<!--<script>
+    var date=new Date();
+    date.setDate(date.getDate());
+    $('#datetimepicker1').click(function()
+    {
+        $(#dob).datepicker(
+                {
+                    formate:'';
+            autofocus:'true';
+                });
+    });
+</script>-->

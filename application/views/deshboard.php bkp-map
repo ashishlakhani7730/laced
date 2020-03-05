@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <?php
+        include("header_include.php");
+        ?>
+       
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader-it">
+            <div class="la-anim-1"></div>
+        </div>
+        <!-- /Preloader -->
+        <div class="wrapper theme-1-active pimary-color-red">
+            <?php
+            include("header_body.php");
+            ?>
+
+            <?php
+            include("header_body_side.php");
+            ?>
+
+            <!-- Right Sidebar Menu -->
+
+            <!-- /Right Sidebar Menu -->
+
+            <!-- Main Content -->
+            <div class="page-wrapper">
+                <div class="container-fluid">
+
+                    <!-- Title -->
+                    <div class="row heading-bg">
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                            <h5 class="txt-dark">Dashboard</h5>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                            <ol class="breadcrumb">
+                                <li><a href="<?php echo base_url()."home";?>">Dashboard</a></li>
+                            </ol> 
+                        </div>
+                        <!-- /Breadcrumb -->
+                    </div>
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $totaluser; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Users</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-users txt-gery data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $activeuser; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Active Users</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-user-plus txt-success data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $usernoti; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">User Notification</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-bell-o txt-warning  data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $adminnoti; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Admin Notification</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-bell txt-success data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $instabuyproduct; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Instabuy Product</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="zmdi zmdi-shopping-cart-add txt-danger data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $tradeproduct; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Trade Product</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="zmdi zmdi-trending-up txt-danger data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $auctionproduct; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Auction Product</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-gavel txt-danger data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $totalproduct; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Total Product</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-shopping-bag txt-danger data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $approveproduct; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Approve Product</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-check txt-success data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $pendingapproveproduct; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Pending for Approval Product</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-clock-o txt-warning data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo $totalorder; ?></span></span>
+                                                    <span class="weight-500 uppercase-font txt-grey block font-13">Total Order</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="fa fa-list-alt txt-warning data-right-rep-icon"></i>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-dark block counter"><span class="counter-anim"><?php echo number_format($rating,2);?></span>%</span>
+                                                    <span class="weight-500 uppercase-font txt-gery block">Users rating Average</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 pt-25  data-wrap-right">
+                                                    <div id="sparkline_4" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <!-- /Row -->
+
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12">
+                        <div class="panel panel-default card-view panel-refresh">
+                            <div class="refresh-container">
+                                <div class="la-anim-1"></div>
+                            </div>
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark">User location</h6>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="pull-left inline-block refresh mr-15">
+                                        <i class="zmdi zmdi-replay"></i>
+                                    </a>
+                                    <a href="#" class="pull-left inline-block full-screen mr-15">
+                                        <i class="zmdi zmdi-fullscreen"></i>
+                                    </a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body">
+                                    <div id="world_map_marker_1" style="height: 385px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                       <div class="panel panel-default card-view panel-refresh">
+                            <div class="refresh-container">
+                                <div class="la-anim-1"></div>
+                            </div>
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark">Sign Up User</h6>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="pull-left inline-block refresh mr-15">
+                                        <i class="zmdi zmdi-replay"></i>
+                                    </a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body"> 
+                                    <hr class="light-grey-hr row mt-10 mb-15"/>
+                                    <div class="label-chatrs">
+                                        <div class="">
+                                            <span class="clabels clabels-lg inline-block bg-blue mr-10 pull-left"></span>
+                                            <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5"><?php echo $totaluser - $referal." "; ?>   Organic</span></span>
+                                            <div id="sparkline_1" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <hr class="light-grey-hr row mt-10 mb-15"/>
+                                    <div class="label-chatrs">
+                                        <div class="">
+                                            <span class="clabels clabels-lg inline-block bg-green mr-10 pull-left"></span>
+                                            <span class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span class="block font-15 weight-500 mb-5"><?php echo $referal; ?> Refrral</span></span>
+                                            <div id="sparkline_2" class="pull-right" style="width: 100px; overflow: hidden; margin: 0px auto;"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- /Footer -->
+
+            </div>
+            <!-- /Main Content -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- JavaScript -->
+
+        <!-- jQuery -->
+<?php
+include("footer_include.php");
+?>
